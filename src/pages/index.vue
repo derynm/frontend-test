@@ -21,10 +21,12 @@
     </v-row>
 
     <v-row v-if="rocketStore.loading.getRockets">
-      <v-col cols="6">
+      <v-col
+        v-for="index in 4"
+        :key="index"
+        cols="6"
+      >
         <v-skeleton-loader
-          v-for="index in 4"
-          :key="index"
           :elevation="2"
           height="200"
           type="card"
